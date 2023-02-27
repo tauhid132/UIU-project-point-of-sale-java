@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="589.0" maxWidth="1094.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="1094.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PosController">
+   <top>
+      <HBox prefHeight="53.0" prefWidth="771.0" style="-fx-background-color: #0099ff;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="53.0" prefWidth="190.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="1.0" prefHeight="49.0" prefWidth="192.0" text=" POS" textFill="#f2eded">
+                     <font>
+                        <Font name="System Bold Italic" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="53.0" prefWidth="306.0">
+               <children>
+                  <TextField prefHeight="40.0" prefWidth="190.0" promptText="SEARCH" style="-fx-background-radius: 2em;">
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="112.0" style="-fx-background-color: #00ff99; -fx-background-radius: 2EM;" text="Search">
+                     <HBox.margin>
+                        <Insets left="2.0" top="8.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <ImageView fitHeight="43.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="topUsernameLabel" alignment="CENTER" prefHeight="42.0" prefWidth="131.0" text="Label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="427.0" prefWidth="189.0" style="-fx-background-color: #4d4d4d;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="51.0" prefWidth="170.0">
+               <children>
+                  <Button fx:id="switchToDashboard" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="55.0" prefWidth="167.0" style="-fx-background-color: #4d4d4d;" text="Dashboard" textFill="#eeecec">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="170.0">
+               <children>
+                  <Button fx:id="switchToPos" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToPos" prefHeight="55.0" prefWidth="167.0" style="-fx-background-color: #4d4d4d;" text="Cart" textFill="#eeecec">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Button fx:id="switchToProducts" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToProducts" prefHeight="55.0" prefWidth="167.0" style="-fx-background-color: #4d4d4d;" text="All Products" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/product.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="switchToCategories" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="55.0" prefWidth="167.0" style="-fx-background-color: #4d4d4d;" text="Categories" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/burger.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="switchToSubcategories" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToSubcategories" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #4d4d4d;" text="Sub-Categories" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/burger.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="switchToReport" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToReport" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #4d4d4d;" text="Report" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/data.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="switchToAdmin" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToAdmin" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #4d4d4d;" text="Admins" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#logout" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #4d4d4d;" text="Logout" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="53.0" prefWidth="905.0" AnchorPane.bottomAnchor="483.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cart.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="28.0" prefWidth="225.0" text="Sales Cart">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <AnchorPane prefHeight="53.0" prefWidth="623.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutX="1.0" layoutY="53.0" prefHeight="483.0" prefWidth="905.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="53.0">
+               <children>
+                  <AnchorPane prefHeight="483.0" prefWidth="580.0" style="-fx-background-color: #d9d9d9;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="181.0" layoutY="7.0" prefHeight="41.0" prefWidth="190.0" style="-fx-background-color: #3399ff; -fx-background-radius: 2em;" text="    Product Selector" textFill="#eeebeb">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="catOP" layoutX="14.0" layoutY="78.0" prefHeight="28.0" prefWidth="248.0" style="-fx-background-radius: 1em; -fx-background-color: white;" />
+                        <ChoiceBox fx:id="subCatOP" layoutX="294.0" layoutY="78.0" prefHeight="28.0" prefWidth="235.0" style="-fx-background-radius: 1em; -fx-background-color: white;" />
+                        <TableView fx:id="proTable" layoutX="9.0" layoutY="125.0" prefHeight="266.0" prefWidth="539.0">
+                          <columns>
+                            <TableColumn fx:id="colNo" prefWidth="50.0" text="No" />
+                              <TableColumn fx:id="colProName" prefWidth="125.0" text="Product Name" />
+                              <TableColumn fx:id="colDes" prefWidth="101.0" text="Description" />
+                              <TableColumn fx:id="colStock" prefWidth="89.0" text="Stock" />
+                              <TableColumn fx:id="colBuyPrice" prefWidth="85.0" text="Buy Price" />
+                              <TableColumn fx:id="colSellPrice" prefWidth="87.0" text="Retail Price" />
+                          </columns>
+                        </TableView>
+                        <Button alignment="BASELINE_LEFT" layoutX="411.0" layoutY="414.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="137.0" style="-fx-background-color: #33cc33; -fx-background-radius: 2em;" text="Add To Cart">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="qtyTF" alignment="CENTER" layoutX="126.0" layoutY="414.0" prefHeight="31.0" prefWidth="45.0" text="0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="97.0" layoutY="414.0" mnemonicParsing="false" onAction="#QtyUP" style="-fx-background-color: #3399ff;" text="+" textFill="#f2eeee">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="169.0" layoutY="414.0" mnemonicParsing="false" onAction="#QtyDown" prefHeight="31.0" prefWidth="32.0" style="-fx-background-color: #3399ff;" text="-" textFill="#eee2e2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="BASELINE_RIGHT" layoutX="19.0" layoutY="415.0" prefHeight="28.0" prefWidth="72.0" text="Quantity">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="45.0" prefHeight="23.0" prefWidth="242.0" text="Select Category">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="47.0" prefHeight="23.0" prefWidth="242.0" text="Select SubCategory">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="188.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/product.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="483.0" prefWidth="342.0" style="-fx-background-color: #a6a6a6;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="100.0" layoutY="7.0" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #ffaa00; -fx-background-radius: 2em;" text="Shoping Cart" textFill="#eeebeb">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="50.0" prefHeight="30.0" prefWidth="97.0" text="Order No">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="orderNoTF" layoutX="130.0" layoutY="52.0" prefHeight="20.0" prefWidth="186.0" />
+                        <Label alignment="CENTER_RIGHT" layoutY="77.0" prefHeight="30.0" prefWidth="123.0" text="Customer Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="customerName" layoutX="130.0" layoutY="80.0" prefHeight="16.0" prefWidth="186.0" />
+                        <TableView fx:id="cartTable" layoutX="12.0" layoutY="147.0" prefHeight="187.0" prefWidth="310.0">
+                          <columns>
+                            <TableColumn fx:id="colNoCart" prefWidth="39.0" text="No" />
+                              <TableColumn fx:id="colProNameCart" prefWidth="98.0" text="Pro Name" />
+                              <TableColumn fx:id="colQtyCart" prefWidth="53.0" text="QTY" />
+                              <TableColumn fx:id="colAmountCart" prefWidth="60.0" text="Amount" />
+                              <TableColumn fx:id="colTotalCart" prefWidth="69.0" text="Total" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="switchToAdmin11" alignment="BASELINE_LEFT" layoutX="197.0" layoutY="431.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #3399ff; -fx-background-radius: 2em;" text="      CheckOut">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER_RIGHT" layoutX="100.0" layoutY="334.0" prefHeight="30.0" prefWidth="97.0" text="Total Price">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="totalPriceTF" alignment="CENTER_RIGHT" layoutX="215.0" layoutY="336.0" prefHeight="27.0" prefWidth="108.0" text="0.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="102.0" layoutY="362.0" prefHeight="30.0" prefWidth="97.0" text="Discount">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="discountTF" alignment="CENTER_RIGHT" layoutX="215.0" layoutY="365.0" prefHeight="24.0" prefWidth="108.0" text="0.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="102.0" layoutY="392.0" prefHeight="30.0" prefWidth="97.0" text="Grand Total">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="grandTotalTF" alignment="CENTER_RIGHT" layoutX="215.0" layoutY="395.0" prefHeight="24.0" prefWidth="108.0" text="0.0" />
+                        <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="108.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cart.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="203.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/add.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" layoutX="48.0" layoutY="432.0" mnemonicParsing="false" onAction="#removeFromCart" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: #ff1a1a; -fx-background-radius: 2em;" text="        Remove">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="58.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/exit.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER_RIGHT" layoutX="4.0" layoutY="107.0" prefHeight="30.0" prefWidth="123.0" text="Mobile">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="mobileTF" layoutX="130.0" layoutY="108.0" prefHeight="16.0" prefWidth="186.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

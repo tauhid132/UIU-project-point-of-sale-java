@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="341.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.viewReport">
+   <children>
+      <Label alignment="CENTER" layoutX="201.0" layoutY="20.0" prefHeight="43.0" prefWidth="172.0" text="Report Details">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="cartTable" layoutX="15.0" layoutY="85.0" prefHeight="200.0" prefWidth="544.0">
+        <columns>
+          <TableColumn fx:id="colNoCart" prefWidth="52.0" text="No" />
+          <TableColumn fx:id="colProNameCart" prefWidth="125.0" text="Name" />
+            <TableColumn fx:id="colProDes" prefWidth="132.0" text="Description" />
+            <TableColumn fx:id="colQtyCart" prefWidth="60.0" text="QTY" />
+            <TableColumn fx:id="colAmountCart" prefWidth="81.0" text="Amount" />
+            <TableColumn fx:id="colTotalCart" prefWidth="93.0" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

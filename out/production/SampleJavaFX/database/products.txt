@@ -1,0 +1,9 @@
+1###Asus G41###G41 Motherboard###Motherboard###Asus###2###3500.0###4000.0
+2###Asus H61M###4th Gen Motherboard###Motherboard###Asus###2###5500.0###5700.0
+3###Samsung SSD###250 GB SSD###Hard Disk###SSD###22###2400.0###2600.0
+4###Mechnical Keyboard###keyboard###Keyboard###A4 Tech ###5###450.0###500.0
+5###Ryzen7###3.6 Ghz###Processor###Ryzen###5###25000.0###27000.0
+6###DDR3 4GB###DDR3 4gb 1333###Ram###DDR3###1###1800.0###2000.0
+7###DDR4 8GB###Samsung DDR4###Ram###DDR4###2###2800.0###2900.0
+8###Samsung Monitor 19'###Monitor###Monitor###LCD Moitor###2###5000.0###5500.0
+9###Wireless Keyboard###Keyboard###Keyboard###A4 Tech###4###250.0###300.0

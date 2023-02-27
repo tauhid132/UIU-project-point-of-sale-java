@@ -1,0 +1,5 @@
+1###Motherboard
+2###Processor
+3###Ram
+4###Monitor
+5###Keyboard

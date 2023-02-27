@@ -1,0 +1,9 @@
+1###Asus###Motherboard
+2###Gigabyte###Motherboard
+3###Intel###Processor
+4###HDD###Hard Disk
+5###SSD###Hard Disk
+6###Ryzen###Processor
+7###DDR3###Ram
+8###LCD Moitor###Monitor
+9###A4 Tech###Keyboard

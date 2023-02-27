@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="589.0" maxWidth="1094.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="1094.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.dashboardController">
+   <top>
+      <HBox prefHeight="53.0" prefWidth="771.0" style="-fx-background-color: #0099ff;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="53.0" prefWidth="190.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="1.0" prefHeight="49.0" prefWidth="192.0" text=" POS" textFill="#f2eded">
+                     <font>
+                        <Font name="System Bold Italic" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="53.0" prefWidth="306.0">
+               <children>
+                  <TextField prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: white; -fx-background-radius: 2em;">
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="112.0" style="-fx-background-color: #00ff99; -fx-background-radius: 2em;" text="Search">
+                     <HBox.margin>
+                        <Insets left="2.0" top="8.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <ImageView fitHeight="43.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="topUsernameLabel" alignment="CENTER" prefHeight="42.0" prefWidth="152.0" text="Label">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="427.0" prefWidth="189.0" style="-fx-background-color: #4d4d4d;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="51.0" prefWidth="170.0">
+               <children>
+                  <Button fx:id="switchToDashboard" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="55.0" prefWidth="167.0" style="-fx-background-color: #4d4d4d;" text="Dashboard" textFill="#eeecec">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="170.0">
+               <children>
+                  <Button fx:id="switchToPos" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToPos" prefHeight="55.0" prefWidth="167.0" style="-fx-background-color: #4d4d4d;" text="Cart" textFill="#eeecec">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Button fx:id="switchToProducts" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToProducts" prefHeight="55.0" prefWidth="167.0" style="-fx-background-color: #4d4d4d;" text="All Products" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/product.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="switchToCategories" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="55.0" prefWidth="167.0" style="-fx-background-color: #4d4d4d;" text="Categories" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/burger.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="switchToSubcategories" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToSubcategories" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #4d4d4d;" text="Sub-Categories" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/burger.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="switchToReport" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToReport" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #4d4d4d;" text="Report" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/data.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="switchToAdmin" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToAdmin" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #4d4d4d;" text="Admins" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#logout" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #4d4d4d;" text="Logout" textFill="#eeecec">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="53.0" prefWidth="905.0" style="-fx-background-color: #e6e6e6;" AnchorPane.bottomAnchor="483.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="28.0" prefWidth="225.0" text=" My Dashboard">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="3.0" layoutY="62.0" prefHeight="131.0" prefWidth="894.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 2em;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="102.0" layoutX="25.0" layoutY="15.0" stroke="#eee1e1" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="177.0" />
+                  <ImageView fitHeight="42.0" fitWidth="54.0" layoutX="313.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="BASELINE_RIGHT" layoutX="27.0" layoutY="18.0" prefHeight="38.0" prefWidth="169.0" text="Products" textFill="#eeecec">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="adminTF" alignment="BASELINE_RIGHT" layoutX="127.0" layoutY="56.0" prefHeight="55.0" prefWidth="63.0" text="0" textFill="#f2e3e3">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#54a854" height="102.0" layoutX="245.0" layoutY="15.0" stroke="#eee1e1" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="177.0" />
+                  <Label alignment="BASELINE_RIGHT" layoutX="241.0" layoutY="18.0" prefHeight="38.0" prefWidth="169.0" text="Total Stock" textFill="#eeecec">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="productTF" alignment="BASELINE_RIGHT" layoutX="290.0" layoutY="56.0" prefHeight="55.0" prefWidth="96.0" text="0" textFill="#f2e3e3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="42.0" fitWidth="54.0" layoutX="37.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/product.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9e1f" height="102.0" layoutX="469.0" layoutY="14.0" stroke="#eee1e1" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="177.0" />
+                  <Label alignment="BASELINE_RIGHT" layoutX="465.0" layoutY="18.0" prefHeight="38.0" prefWidth="169.0" text="Total Sales" textFill="#eeecec">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stockLabel" alignment="BASELINE_RIGHT" layoutX="522.0" layoutY="58.0" prefHeight="55.0" prefWidth="83.0" text="0" textFill="#f2e3e3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="35.0" layoutX="487.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/png-clipart-banknote-money-font-awesome-business-collection-text-rectangle.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#21dfff" height="102.0" layoutX="684.0" layoutY="15.0" stroke="#eee1e1" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="177.0" />
+                  <Label alignment="BASELINE_RIGHT" layoutX="681.0" layoutY="18.0" prefHeight="38.0" prefWidth="169.0" text="Total Profit" textFill="#eeecec">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="23.0" fitWidth="38.0" layoutX="707.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/png-clipart-banknote-money-font-awesome-business-collection-text-rectangle.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="profitLabel" alignment="BASELINE_RIGHT" layoutX="745.0" layoutY="60.0" prefHeight="55.0" prefWidth="85.0" text="0" textFill="#f2e3e3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="productTF12" alignment="BASELINE_RIGHT" layoutX="601.0" layoutY="58.0" prefHeight="55.0" prefWidth="38.0" text="Tk." textFill="#f2e3e3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="productTF121" alignment="BASELINE_RIGHT" layoutX="818.0" layoutY="60.0" prefHeight="55.0" prefWidth="38.0" text="Tk." textFill="#f2e3e3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="35.0" layoutX="256.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/png-clipart-banknote-money-font-awesome-business-collection-text-rectangle.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="productTF122" alignment="BASELINE_RIGHT" layoutX="377.0" layoutY="56.0" prefHeight="55.0" prefWidth="38.0" text="Tk." textFill="#f2e3e3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="3.0" layoutY="218.0" prefHeight="298.0" prefWidth="537.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 2em;">
+               <children>
+                  <TableView fx:id="recentTable" layoutX="12.0" layoutY="48.0" prefHeight="239.0" prefWidth="514.0">
+                    <columns>
+                      <TableColumn fx:id="colNo" prefWidth="52.0" text="No" />
+                      <TableColumn fx:id="colTotal" prefWidth="97.99996948242188" text="Total Sold" />
+                        <TableColumn fx:id="colProfit" prefWidth="102.0" text="Total Profit" />
+                        <TableColumn fx:id="colSalesPerson" prefWidth="118.00003051757812" text="Sales Person" />
+                        <TableColumn fx:id="colTime" prefWidth="142.0" text="TimeStamp" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="151.0" layoutY="5.0" prefHeight="31.0" prefWidth="214.0" text="Recent Sales">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="561.0" layoutY="215.0" prefHeight="305.0" prefWidth="325.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 2em;">
+               <children>
+                  <Label alignment="CENTER" layoutX="58.0" layoutY="2.0" prefHeight="31.0" prefWidth="214.0" text="Messages">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="messageTA" layoutX="12.0" layoutY="39.0" prefHeight="200.0" prefWidth="301.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextArea>
+                  <TextField fx:id="messageTF" layoutX="16.0" layoutY="247.0" prefHeight="39.0" prefWidth="217.0" promptText="Type Message to Send" style="-fx-background-radius: 1em;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="246.0" layoutY="247.0" mnemonicParsing="false" onAction="#sendMsg" prefHeight="40.0" prefWidth="65.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 1em;" text="Send">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
